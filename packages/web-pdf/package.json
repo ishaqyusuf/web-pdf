@@ -1,0 +1,36 @@
+{
+  "name": "web-pdf",
+  "version": "0.1.0",
+  "description": "Developer-first PDF authoring framework built on @react-pdf/renderer",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "bun run build:types && bun run build:js",
+    "build:js": "bun build src/index.ts --outdir dist --target node --external @react-pdf/renderer --external react",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "dev": "bun build src/index.ts --outdir dist --target node --external @react-pdf/renderer --external react --watch",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@react-pdf/renderer": "^3.0.0",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@react-pdf/renderer": "^3.4.5",
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "typescript": "^5.3.3"
+  },
+  "keywords": ["pdf", "react", "react-pdf", "web-pdf", "document"],
+  "license": "MIT"
+}
