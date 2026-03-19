@@ -1,0 +1,14 @@
+{
+  // Activate Tailwind IntelliSense for web-pdf className props.
+  // Install: bradlc.vscode-tailwindcss
+  "tailwindCSS.experimental.classRegex": [],
+  "tailwindCSS.classFunctions": [],
+  "tailwindCSS.includeLanguages": {
+    "typescriptreact": "html",
+    "typescript": "html"
+  },
+  // Trigger autocomplete on the className prop used by web-pdf components.
+  "tailwindCSS.classAttributes": ["className"],
+  // Suppress "no utility classes" warning — we resolve them at runtime.
+  "tailwindCSS.validate": false
+}
